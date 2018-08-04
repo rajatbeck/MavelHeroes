@@ -1,8 +1,8 @@
-package com.android.pokemonapp.di.module
+package com.android.marvelApp.di.module
 
 import android.app.Application
-import com.android.pokemonapp.BuildConfig
-import com.android.pokemonapp.data.Api
+import com.android.marvelApp.BuildConfig
+import com.android.marvelApp.data.Api
 import com.squareup.moshi.KotlinJsonAdapterFactory
 import com.squareup.moshi.Moshi
 import dagger.Module

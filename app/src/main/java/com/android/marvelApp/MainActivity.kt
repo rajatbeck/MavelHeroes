@@ -1,4 +1,4 @@
-package com.android.pokemonapp
+package com.android.marvelApp
 
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle

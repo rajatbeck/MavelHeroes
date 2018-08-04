@@ -1,4 +1,4 @@
-package com.android.pokemonapp.di
+package com.android.marvelApp.di
 
 import android.arch.lifecycle.ViewModel
 import dagger.MapKey

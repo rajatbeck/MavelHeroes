@@ -1,9 +1,9 @@
-package com.android.pokemonapp.di.component
+package com.android.marvelApp.di.component
 
 import android.app.Application
-import com.android.pokemonapp.PokemonApp
-import com.android.pokemonapp.di.module.AppModule
-import com.android.pokemonapp.di.module.NetModule
+import com.android.marvelApp.PokemonApp
+import com.android.marvelApp.di.module.AppModule
+import com.android.marvelApp.di.module.NetModule
 import dagger.BindsInstance
 import dagger.Component
 import dagger.android.AndroidInjectionModule

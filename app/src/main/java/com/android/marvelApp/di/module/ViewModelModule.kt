@@ -1,7 +1,7 @@
-package com.android.pokemonapp.di.module
+package com.android.marvelApp.di.module
 
 import android.arch.lifecycle.ViewModelProvider
-import com.android.pokemonapp.di.ViewModelFactory
+import com.android.marvelApp.di.ViewModelFactory
 import dagger.Binds
 import dagger.Module
 

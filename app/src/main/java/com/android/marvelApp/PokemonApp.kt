@@ -1,9 +1,9 @@
-package com.android.pokemonapp
+package com.android.marvelApp
 
 
 import android.content.Context
 import android.support.multidex.MultiDex
-import com.android.pokemonapp.di.component.DaggerAppComponent
+import com.android.marvelApp.di.component.DaggerAppComponent
 import dagger.android.AndroidInjector
 import dagger.android.DaggerApplication
 

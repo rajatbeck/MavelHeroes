@@ -1,8 +1,8 @@
-package com.android.pokemonapp.di.module
+package com.android.marvelApp.di.module
 
 import android.app.Application
 import android.content.Context
-import com.android.pokemonapp.PokemonApp
+import com.android.marvelApp.PokemonApp
 import dagger.Binds
 import dagger.Module
 

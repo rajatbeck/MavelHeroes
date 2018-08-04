@@ -1,4 +1,4 @@
-package com.android.pokemonapp.di.module
+package com.android.marvelApp.di.module
 
 import dagger.Module
 

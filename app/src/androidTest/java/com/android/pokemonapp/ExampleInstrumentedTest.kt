@@ -1,4 +1,4 @@
-package com.android.pokemonapp
+package com.android.marvelApp
 
 import android.support.test.InstrumentationRegistry
 import android.support.test.runner.AndroidJUnit4
@@ -19,6 +19,6 @@ class ExampleInstrumentedTest {
     fun useAppContext() {
         // Context of the app under test.
         val appContext = InstrumentationRegistry.getTargetContext()
-        assertEquals("com.android.pokemonapp", appContext.packageName)
+        assertEquals("com.android.marvelApp", appContext.packageName)
     }
 }

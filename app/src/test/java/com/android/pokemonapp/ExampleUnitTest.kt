@@ -1,4 +1,4 @@
-package com.android.pokemonapp
+package com.android.marvelApp
 
 import org.junit.Test
 

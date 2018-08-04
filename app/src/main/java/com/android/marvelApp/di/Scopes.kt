@@ -1,4 +1,4 @@
-package com.android.pokemonapp.di
+package com.android.marvelApp.di
 
 import javax.inject.Scope
 
