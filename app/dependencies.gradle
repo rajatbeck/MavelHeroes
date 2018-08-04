@@ -1,6 +1,6 @@
 ext {
     versions = [
-            support         : "27.0.2",
+            support         : "27.1.0",
             firebase        : '11.8.0',
             moshi           : "1.5.0",
             okHttp          : "3.9.0",
@@ -52,7 +52,7 @@ ext {
             rxKotlin     : "io.reactivex.rxjava2:rxkotlin:$versions.rxKotlin",
             rxAndroid    : "io.reactivex.rxjava2:rxandroid:$versions.rxAndroid",
             traceur      : "com.tspoon.traceur:traceur:$versions.traceur",
-            rxRermissions: "com.tbruyelle.rxpermissions:rxpermissions:$versions.rxPermissions"
+
     ]
 
     androidArch = [
