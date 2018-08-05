@@ -1,7 +1,8 @@
-package com.android.marvelApp
+package com.android.marvelApp.ui
 
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import com.android.marvelApp.R
 
 class MainActivity : AppCompatActivity() {
 
