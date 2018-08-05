@@ -2,7 +2,7 @@ package com.android.marvelApp.di.module
 
 import android.app.Application
 import com.android.marvelApp.BuildConfig
-import com.android.marvelApp.data.Api
+import com.android.marvelApp.data.remote.Api
 import com.squareup.moshi.KotlinJsonAdapterFactory
 import com.squareup.moshi.Moshi
 import dagger.Module
