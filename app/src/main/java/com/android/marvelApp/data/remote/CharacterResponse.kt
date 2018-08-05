@@ -22,7 +22,7 @@ data class Data(
 )
 
 data class Result(
-        @Json(name = "id") val id: String,
+        @Json(name = "id") val id: Int,
         @Json(name = "name") val name: String,
         @Json(name = "description") val description: String,
         @Json(name = "modified") val modified: String,
