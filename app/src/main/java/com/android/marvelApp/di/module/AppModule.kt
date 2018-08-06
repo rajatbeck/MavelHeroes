@@ -12,10 +12,8 @@ import javax.inject.Singleton
 
 
 @Module(includes = [ViewModelModule::class])
-abstract class AppModule {
+class AppModule {
 
-    @Binds
-    abstract fun provideContext(application: PokemonApp): Context
 
     @Provides
     @Singleton
