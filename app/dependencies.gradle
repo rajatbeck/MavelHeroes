@@ -31,6 +31,7 @@ ext {
             multiDex        : '1.0.2',
             mockitoKotlin   : '1.5.0',
             androidArch     : '1.1.1',
+            lottie          : '2.5.5'
     ]
 
     mockito = [mockito: "org.mockito:mockito-core:$versions.mockito"]
@@ -49,9 +50,9 @@ ext {
     ]
 
     rxJava = [
-            rxKotlin     : "io.reactivex.rxjava2:rxkotlin:$versions.rxKotlin",
-            rxAndroid    : "io.reactivex.rxjava2:rxandroid:$versions.rxAndroid",
-            traceur      : "com.tspoon.traceur:traceur:$versions.traceur",
+            rxKotlin : "io.reactivex.rxjava2:rxkotlin:$versions.rxKotlin",
+            rxAndroid: "io.reactivex.rxjava2:rxandroid:$versions.rxAndroid",
+            traceur  : "com.tspoon.traceur:traceur:$versions.traceur",
 
     ]
 
@@ -79,6 +80,7 @@ ext {
             okhttp: "com.squareup.okhttp3:okhttp:$versions.okHttp",
             stetho: "com.facebook.stetho:stetho-okhttp3:$versions.stetho"
     ]
+
 
     googlePlay = [
             maps             : "com.google.android.gms:play-services-maps:$versions.firebase",
@@ -139,12 +141,14 @@ ext {
     glideCompiler = "com.github.bumptech.glide:compiler:$versions.glide"
     glideOkhttp = "com.github.bumptech.glide:okhttp3-integration:$versions.glide"
 
+    lottie = "com.airbnb.android:lottie:$versions.lottie"
+
     googlePlayLibs = googlePlay.values()
     supportLibs = supportDeps.values()
     networkLibs = retrofit.values() + okHttp.values() + moshi.values()
     rxJavaLibs = rxJava.values()
     androidArchLibs = androidArch.values()
-    otherLibs = [butterKnife, timber, dagger, glide, daggerAndorid]
+    otherLibs = [butterKnife, timber, dagger, glide, daggerAndorid,lottie]
 
     debugLibs = onlyDebug.values() + leakCannary
     releaseLibs = onlyRelease.values() + leakCannary

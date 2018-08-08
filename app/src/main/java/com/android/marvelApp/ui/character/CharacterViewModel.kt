@@ -15,11 +15,14 @@ import javax.inject.Inject
 
 
 class CharacterViewModel @Inject constructor(private val repository: Repository,
-                                             private  val scheduler: BaseScheduler) : BaseViewModel<Int>() {
+                                             private val scheduler: BaseScheduler) : BaseViewModel<Int>() {
 
     private var characterSourceFactory: CharacterDataSourceFactory
     private val compositeDisposable = CompositeDisposable()
     var result: LiveData<PagedList<Result>>
+
+    fun getResults() = characterSourceFactory.characterListDataSource.value
+    fun retry() = characterSourceFactory.characterListDataSource.value?.retry()
 
     init {
 
@@ -38,7 +41,6 @@ class CharacterViewModel @Inject constructor(private val repository: Repository,
         compositeDisposable.dispose()
         super.onCleared()
     }
-
 
 
     class CharacterDataSourceFactory(
