@@ -1,7 +1,7 @@
 package com.android.marvelApp.di.module
 
 import com.android.marvelApp.di.ActivityScoped
-import com.readystatesoftware.chuck.internal.ui.MainActivity
+import com.android.marvelApp.ui.MainActivity
 import dagger.Module
 import dagger.android.ContributesAndroidInjector
 
@@ -9,6 +9,6 @@ import dagger.android.ContributesAndroidInjector
 abstract class ActivityBuildersModule {
 
     @ContributesAndroidInjector(modules = [FragmentBuildersModule::class])
-    abstract fun contributesMainActivity():MainActivity
+    abstract fun contributesMainActivity(): MainActivity
 
 }

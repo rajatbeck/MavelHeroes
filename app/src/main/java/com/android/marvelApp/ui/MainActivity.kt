@@ -32,9 +32,9 @@ public class MainActivity : DaggerAppCompatActivity()
         setContentView(R.layout.activity_main)
 
 
-//        transact{
-//            add(R.id.fragmentContainer,CharacterListFragment.getInstance());
-//        }
+        transact{
+            add(R.id.fragmentContainer,CharacterListFragment.getInstance());
+        }
 
 //        supportFragmentManager.beginTransaction()
 //                .add(R.id.fragmentContainer, CharacterListFragment.getInstance(), CharacterListFragment::class.java.canonicalName)
