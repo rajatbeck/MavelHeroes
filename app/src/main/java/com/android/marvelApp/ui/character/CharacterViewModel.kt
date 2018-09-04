@@ -2,10 +2,12 @@ package com.android.marvelApp.ui.character
 
 import android.arch.lifecycle.LiveData
 import android.arch.lifecycle.MutableLiveData
+import android.arch.lifecycle.Transformations
 import android.arch.paging.DataSource
 import android.arch.paging.LivePagedListBuilder
 import android.arch.paging.PagedList
 import com.android.marvelApp.data.remote.CharacterListDataSource
+import com.android.marvelApp.data.remote.Response
 import com.android.marvelApp.data.remote.Result
 import com.android.marvelApp.data.repository.Repository
 import com.android.marvelApp.schedulers.BaseScheduler
@@ -21,7 +23,10 @@ class CharacterViewModel @Inject constructor(private val repository: Repository,
     private val compositeDisposable = CompositeDisposable()
     var result: LiveData<PagedList<Result>>
 
-    fun getResults() = characterSourceFactory.characterListDataSource.value
+    fun getResults():LiveData<Response<Int>> = Transformations.switchMap<CharacterListDataSource,Response<Int>>(
+            characterSourceFactory.characterListDataSource
+    ) {it.response}
+
     fun retry() = characterSourceFactory.characterListDataSource.value?.retry()
 
     init {
@@ -30,7 +35,7 @@ class CharacterViewModel @Inject constructor(private val repository: Repository,
                 .setInitialLoadSizeHint(20)
                 .setPageSize(20)
                 .setEnablePlaceholders(false)
-                .setPrefetchDistance(10)
+//                .setPrefetchDistance(10)
                 .build()
 
         characterSourceFactory = CharacterDataSourceFactory(repository, scheduler, compositeDisposable)

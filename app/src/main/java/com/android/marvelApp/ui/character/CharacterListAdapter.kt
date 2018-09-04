@@ -19,8 +19,6 @@ class CharacterListAdapter(var retry: () -> Unit) : PagedListAdapter<Result, Rec
             override fun areItemsTheSame(oldItem: Result?, newItem: Result?): Boolean = oldItem?.id == newItem?.id
 
             override fun areContentsTheSame(oldItem: Result?, newItem: Result?): Boolean = oldItem == newItem
-
-
         }
 
     }
@@ -30,6 +28,36 @@ class CharacterListAdapter(var retry: () -> Unit) : PagedListAdapter<Result, Rec
     fun setStateValue(state: Int) {
 
         if (state == this.state) return
+
+        //check before setting state is extra column is showing
+        val extraShowing = hasExtra()
+        this.state = state
+
+
+        when (this.state) {
+            ViewState.LOADING -> {
+                if (extraShowing)
+                    notifyItemChanged(itemCount)
+                else
+                    notifyItemInserted(super.getItemCount())
+            }
+            ViewState.ERROR -> {
+                if (extraShowing)
+                    notifyItemChanged(itemCount)
+                else
+                    notifyItemInserted(super.getItemCount())
+            }
+            ViewState.SUCCESS -> {
+                if (extraShowing) {
+                    notifyItemRemoved(itemCount + 1)
+                }
+            }
+            ViewState.COMPLETE -> {
+                if (extraShowing) {
+                    notifyItemRemoved(itemCount + 1)
+                }
+            }
+        }
     }
 
 

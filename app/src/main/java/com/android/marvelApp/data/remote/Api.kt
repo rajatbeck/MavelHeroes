@@ -16,8 +16,8 @@ interface Api {
             @Query("apikey") apikey: String = "092d5a1c458d3036fe01bdfe3c38631a",
             @Query("hash") hash:String,
             @Query("orderBy") orderBy: String = "name",
-            @Query("limit") limit: Int = 1,
-            @Query("offset") offset: Int = 10
+            @Query("limit") limit: Int = 20,
+            @Query("offset") offset: Int=0
     ): Single<CharacterResponse>
 
 }

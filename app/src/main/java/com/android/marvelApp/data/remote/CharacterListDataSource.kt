@@ -19,7 +19,7 @@ class CharacterListDataSource @Inject constructor(
 ) : ItemKeyedDataSource<Int, Result>() {
 
 
-    var page = 1
+    var page = 0
     var response = MutableLiveData<Response<Int>>()
     private var retryCompletable: Completable? = null
 
@@ -59,7 +59,7 @@ class CharacterListDataSource @Inject constructor(
                         onNext = {
                             response.postValue(Response(ViewState.SUCCESS))
                             callback.onResult(it)
-                            page++;
+                            page+=21;
                             setRetry(null)
 
                         },
