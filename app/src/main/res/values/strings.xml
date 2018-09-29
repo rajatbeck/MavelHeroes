@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">PokemonApp</string>
+    <string name="app_name">Marvel</string>
     <string name="character_row_img_description">Avatar image of character</string>
     <string name="character_row_character_name">Character Name</string>
     <string name="character_progress_text">Character Loading</string>
