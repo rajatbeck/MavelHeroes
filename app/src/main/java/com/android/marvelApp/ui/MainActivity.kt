@@ -36,9 +36,6 @@ public class MainActivity : DaggerAppCompatActivity()
             add(R.id.fragmentContainer,CharacterListFragment.getInstance());
         }
 
-//        supportFragmentManager.beginTransaction()
-//                .add(R.id.fragmentContainer, CharacterListFragment.getInstance(), CharacterListFragment::class.java.canonicalName)
-//                .addToBackStack(null)
-//                .commit()
+
     }
 }

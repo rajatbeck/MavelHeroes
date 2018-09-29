@@ -10,13 +10,11 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.android.marvelApp.R
-import com.android.marvelApp.data.remote.Response
 import com.android.marvelApp.data.remote.Result
 import com.android.marvelApp.data.repository.Repository
 import com.android.marvelApp.utils.extensions.whenNotNull
 import dagger.android.support.DaggerFragment
 
-import dagger.android.support.HasSupportFragmentInjector
 import kotlinx.android.synthetic.main.fragment_character_list.*
 import javax.inject.Inject
 
@@ -60,6 +58,6 @@ public class CharacterListFragment : DaggerFragment() {
 
         characterViewModel.result.observe(this, Observer<PagedList<Result>> { characterListAdapter.submitList(it) })
 
-//        characterViewModel.getResults().observe(this, Observer { value -> value.whenNotNull { characterListAdapter.setStateValue(it.status) } })
+        characterViewModel.getResults().observe(this, Observer { value -> value.whenNotNull { characterListAdapter.setStateValue(it.status) } })
     }
 }
